@@ -1,6 +1,6 @@
 export default function Image4() {
   return (
-    <div className="image4">
+    <div className="Mainimage4">
       <svg
         width="24"
         height="24"

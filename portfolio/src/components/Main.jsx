@@ -6,10 +6,10 @@ export default function Main() {
   return (
     <div className="Main1">
       <div className="main11">
-        <div className="text1">
-          <div className="text11">
-            <h1 className="text111">Hi, I’m Sagar 👋</h1>
-            <p className="text112">
+        <div className="Maintext1">
+          <div className="Maintext11">
+            <h1 className="Maintext111">Hi, I’m Sagar 👋</h1>
+            <p className="Maintext112">
               I'm a full stack developer (React.js & Node.js) with a focus on
               creating (and occasionally designing) exceptional digital
               experiences that are fast, accessible, visually appealing, and
@@ -18,14 +18,14 @@ export default function Main() {
             </p>
           </div>
 
-          <div className="text1221">
-            <div className="Image3">
+          <div className="Maintext1221">
+            <div className="MainImage3">
               <Image3 />
-              <p className="text1222">Ahmedabad, India</p>
+              <p className="Maintext1222">Ahmedabad, India</p>
             </div>
-            <div className="text12">
-              <div className="text121">
-                <div className="text1211"></div>
+            <div className="Maintext12">
+              <div className="Maintext121">
+                <div className="MAintext1211"></div>
               </div>
               <p>Available for new projects</p>
             </div>
@@ -33,9 +33,9 @@ export default function Main() {
 
           <Image4 />
         </div>
-        <div className="Image2">
+        <div className="MainImage2">
           <Image2 />
-          <div className="image2cover"></div>
+          <div className="Mainimage2cover"></div>
         </div>
       </div>
     </div>
