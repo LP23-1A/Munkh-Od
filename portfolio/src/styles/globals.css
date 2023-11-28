@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +10,17 @@
   font-family: "Inter";
 }
 
-.Main01 {
+body {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1440px;
 }
 
 .Navbar {
@@ -219,6 +229,24 @@
 .about2 {
   display: flex;
   gap: 48px;
+}
+
+.about21 {
+  display: flex;
+  flex-direction: column;
+  min-width: 444px;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-items: stretch;
+}
+
+.about22 {
+  display: flex;
+  flex-direction: column;
+  min-width: 444px;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-items: stretch;
 }
 
 .about221 {
