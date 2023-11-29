@@ -2,7 +2,7 @@ import Image5 from "./Image5";
 
 export default function About() {
   return (
-    <div className="aboutmain">
+    <div className="aboutmain dark:bg-black">
       <div className="aboutmain1">
         <div className="about1">
           <div className="about101">

@@ -4,11 +4,13 @@ import Image4 from "./image4";
 
 export default function Main() {
   return (
-    <div className="Main1">
-      <div className="main11">
-        <div className="Maintext1">
-          <div className="Maintext11">
-            <h1 className="Maintext111">Hi, I’m Sagar 👋</h1>
+    <div className="flex px-24 py-20 justify-between items-start self-stretch">
+      <div className="flex py-8 justify-between items-start self-stretch gap-12">
+        <div className="flex flex-col gap-12 ">
+          <div className="flex flex-col justify-center items-start gap-2 self-stretch">
+            <h1 className="text-6xl not-italic font-bold Maintext111 ">
+              Hi, I’m Sagar 👋
+            </h1>
             <p className="Maintext112">
               I'm a full stack developer (React.js & Node.js) with a focus on
               creating (and occasionally designing) exceptional digital

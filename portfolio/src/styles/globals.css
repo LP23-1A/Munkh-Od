@@ -23,35 +23,35 @@ body {
   justify-content: center;
 }
 
-.Navbar {
+/* .Navbar {
   padding: 16px 80px;
-}
-
+} */
+/* 
 .Navbar1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 32px;
-}
+} */
 
-.Navitems {
+/* .Navitems {
   display: flex;
   gap: 24px;
-}
+} */
 
-.NavAbout {
+/* .NavAbout {
   border: none;
   background: none;
   color: #4b5563;
-}
+} */
 
-.NavWork {
+/* .NavWork {
   border: none;
   background: none;
   color: #4b5563;
-}
+} */
 
-.NavTestimonials {
+/* .NavTestimonials {
   border: none;
   background: none;
   color: #4b5563;
@@ -67,56 +67,56 @@ body {
   border: none;
   background: none;
   color: #4b5563;
-}
+} */
 
 .NavDownloadCV {
-  display: flex;
+  /* display: flex;
   padding: 6px 16px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border: none;
-  border-radius: 12px;
+  border-radius: 12px; */
   color: #f9fafb;
   background: #111827;
 }
 
-.Main1 {
+/* .Main1 {
   display: flex;
   padding: 96px 80px;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
-}
+} */
 
-.main11 {
+/* .main11 {
   display: flex;
   padding: 0px 32px;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
   gap: 48px;
-}
+} */
 
-.Maintext1 {
+/* .Maintext1 {
   display: flex;
   flex-direction: column;
   gap: 48px;
-}
+} */
 
-.Maintext11 {
+/* .Maintext11 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
-}
+} */
 
 .Maintext111 {
-  font-size: 60px;
+  /* font-size: 60px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700; */
   line-height: 72px;
   letter-spacing: -1.2px;
   margin: 0;
