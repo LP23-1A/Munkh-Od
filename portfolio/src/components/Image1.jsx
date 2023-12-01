@@ -1,4 +1,4 @@
-export default function image1() {
+export default function Image1() {
   return (
     <svg
       width="24"

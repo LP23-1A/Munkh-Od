@@ -20,7 +20,7 @@ export default function NavItems() {
   };
   return (
     <div className="flex gap-6">
-      <button className="border-none bg-none gray-600 ">About</button>
+      <button className="border-none bg-none gray-600">About</button>
       <button className="border-none bg-none gray-600">Work</button>
       <button className="border-none bg-none gray-600">Testimonials</button>
       <button className="border-none bg-none gray-600">Contact</button>

@@ -1,6 +1,6 @@
-import Image2 from "../components/image2";
+import Image2 from "../components/Image2";
 import Image3 from "./Image3";
-import Image4 from "./image4";
+import Image4 from "./Image4";
 
 export default function Main() {
   return (
