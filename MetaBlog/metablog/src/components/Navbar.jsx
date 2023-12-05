@@ -32,13 +32,16 @@ export default function Navbar() {
         <button className="md:hidden" onClick={menuHandler}>
           <MenuIcon />
         </button>
-        <div className="hidden md:flex items-center gap-4">
-          <ul className="py-4 flex gap-4">
+        <div className="hidden md:flex items-center gap-4 ">
+          <ul className="py-4 flex gap-7 w-[667px] justify-center ">
             {MENU_ITEMS.map((item) => (
               <li className="list-none">{item}</li>
             ))}
           </ul>
-          <Search />
+          <div>
+            <Search />
+          </div>
+
           {/* <button onClick={themeToggle}>
             <Theme />
           </button> */}
