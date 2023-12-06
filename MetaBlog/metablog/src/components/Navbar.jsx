@@ -27,12 +27,12 @@ export default function Navbar() {
 
   return (
     <Layout>
-      <nav className="w-full flex items-center py-4 ">
+      <nav className="w-full flex items-center pt-8 pb-8 pr-[350px] pl-[350px] ">
         <Logo color="#fff" />
         <button className="md:hidden" onClick={menuHandler}>
           <MenuIcon />
         </button>
-        <div className="hidden md:flex items-center gap-4 ">
+        <div className="hidden md:flex items-center gap-[21px] ">
           <ul className="py-4 flex gap-7 w-[667px] justify-center ">
             {MENU_ITEMS.map((item) => (
               <li className="list-none">{item}</li>
