@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <Layout>
-      <nav className="w-full flex items-center pt-8 pb-8 pr-[350px] pl-[350px] ">
+      <nav className="w-full flex items-center pt-8 pb-8 pr-[350px] pl-[350px] gap-[118px] ">
         <Logo color="#fff" />
         <button className="md:hidden" onClick={menuHandler}>
           <MenuIcon />
