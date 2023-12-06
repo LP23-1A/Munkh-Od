@@ -41,7 +41,7 @@ export default function Home() {
             <h1 className="text-[36px] font-bold leading-10">
               Grid system for better Design User Interface
             </h1>
-            <h5>August 20,2022</h5>~``
+            <h5>August 20,2022</h5>
           </div>
         </div>
       </div>
