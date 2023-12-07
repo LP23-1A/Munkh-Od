@@ -1,7 +1,7 @@
 import MainBigPic from "@/components/icons/MainBigPic";
 import Navbar from "@/components/Navbar";
 import TrendingPic from "@/components/icons/TrendingPic";
-
+import PicBox from "../components/PicBox";
 const MainBigData = [
   {
     img: "https://s3-alpha-sig.figma.com/img/eb4f/aad2/4394e91108e011b0d07581596959713b?Expires=1702857600&Signature=TEJqgZebhD5ngGJk43qte2~qf859bguz1g9w0nc-t-7JwZKqGO9HkQ4f7UsByRTKRdqOFoXLq-GeNWVTxyF9yaI-X8jNnKzpHHPB0mwm5217XLBDvleUnawK8Q52jyuf37X~tBpedwk-oALlTZsspRn-XWzxdTRQOMwtXGLvj~Kv~0VS~Cxf7gUiI44x1oZGIcO9HQbL7oAr57JaTLqKz-5STAIIaCV4bEzUKUSd3x8o89LHrwfVdB1rnbaOm-NrwsFjsCGap2EeymdGc1fM9MLK7cYBadPJIs062VLD9cvqO4LZZ7kzDuD2FWVmWuhODVPANFGn0YJgP78jzOayAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
@@ -25,7 +25,7 @@ const TrendingData = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[100px] justify-center items-center">
+    <main className="flex flex-col gap-[100px] justify-center items-center pr-[350px] pl-[350px]">
       <Navbar />
       <div className="relative flex flex-col justify-center">
         {MainBigData.map((element) => {
@@ -34,9 +34,7 @@ export default function Home() {
         <div className="absolute flex flex-col w-[598px] h-[252px] p-[40px] gap-[24px] rounded-xl border border-solid bg-white right-[607px] left-[11px] top-[335px] bottom-[64px]   ">
           <div className="flex flex-col gap-[16px]">
             <div className="flex w-[97px] py-[4px] px-[10px] justify-center items-center gap-[4px] rounded bg-[#4B6BFB] ">
-              <h3 className="text-[14x] font-medium text-white  ">
-                Technology
-              </h3>
+              <h3 className="text-[14x] font-medium text-white">Technology</h3>
             </div>
             <h1 className="text-[36px] font-bold leading-10">
               Grid system for better Design User Interface
@@ -51,7 +49,26 @@ export default function Home() {
           {TrendingData.map((element) => {
             return <TrendingPic img={element.img} />;
           })}
-          ~
+        </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <div className="flex flex-col justify-center gap-[30px]">
+          <h1 className="text-[24px] font-bold">All Blog Post</h1>
+          <div className="flex gap-[30px]">
+            <div className="flex gap-[20px] ">
+              <button>All</button>
+              <button>Design</button>
+              <button>Travel</button>
+              <button>Fashion</button>
+              <button>Technology</button>
+              <button>Branding</button>
+            </div>
+            <div className="w-[826px] flex justify-end">
+              <button>View All</button>
+            </div>
+          </div>
+
+          <PicBox />
         </div>
       </div>
     </main>
