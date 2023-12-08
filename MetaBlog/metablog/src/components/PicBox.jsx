@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex items-center justify-center flex-wrap gap-5 bg-cover">
+    <main className="flex items-center justify-center flex-wrap gap-5">
       {data.map((el, index) => {
         return (
           <div className="flex flex-col w-[392px] rounded-xl border p-4 gap-4 border-solid justify-center items-center ">
