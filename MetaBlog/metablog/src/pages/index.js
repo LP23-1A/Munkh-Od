@@ -4,6 +4,11 @@ import TrendingPic from "@/components/icons/TrendingPic";
 import PicBox from "../components/PicBox";
 import ArrowLeft from "@/components/icons/ArrowLeft";
 import ArrowRight from "@/components/icons/ArrowRight";
+import Facebook from "@/components/icons/Facebook";
+import Twitter from "@/components/icons/Twitter";
+import Instagram from "@/components/icons/Instagram";
+import Linkedin from "@/components/icons/Linkedin";
+import Blogo from "@/components/icons/Blogo";
 const MainBigData = [
   {
     img: "https://s3-alpha-sig.figma.com/img/eb4f/aad2/4394e91108e011b0d07581596959713b?Expires=1702857600&Signature=TEJqgZebhD5ngGJk43qte2~qf859bguz1g9w0nc-t-7JwZKqGO9HkQ4f7UsByRTKRdqOFoXLq-GeNWVTxyF9yaI-X8jNnKzpHHPB0mwm5217XLBDvleUnawK8Q52jyuf37X~tBpedwk-oALlTZsspRn-XWzxdTRQOMwtXGLvj~Kv~0VS~Cxf7gUiI44x1oZGIcO9HQbL7oAr57JaTLqKz-5STAIIaCV4bEzUKUSd3x8o89LHrwfVdB1rnbaOm-NrwsFjsCGap2EeymdGc1fM9MLK7cYBadPJIs062VLD9cvqO4LZZ7kzDuD2FWVmWuhODVPANFGn0YJgP78jzOayAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
@@ -27,62 +32,116 @@ const TrendingData = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[100px] justify-center items-center pr-[350px] pl-[350px]">
-      <Navbar />
-      <div className="relative flex flex-col justify-center">
-        {MainBigData.map((element) => {
-          return <MainBigPic img={element.img} />;
-        })}
-        <div className="absolute flex flex-col w-[598px] h-[252px] p-[40px] gap-[24px] rounded-xl border border-solid bg-white right-[607px] left-[11px] top-[335px] bottom-[64px]   ">
-          <div className="flex flex-col gap-[16px]">
-            <div className="flex w-[97px] py-[4px] px-[10px] justify-center items-center gap-[4px] rounded bg-[#4B6BFB] ">
-              <h3 className="text-[14x] font-medium text-white">Technology</h3>
-            </div>
-            <h1 className="text-[36px] font-bold leading-10">
-              Grid system for better Design User Interface
-            </h1>
-            <h5>August 20,2022</h5>
-          </div>
-        </div>
-        <div className="flex ">
-          <button>
-            <ArrowLeft />
-          </button>
-          <button>
-            <ArrowRight />
-          </button>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-[30px]">
-        <h1 className="text-[24px] font-bold">Trending</h1>
-        <div className="flex justify-center gap-[20px]">
-          {TrendingData.map((element) => {
-            return <TrendingPic img={element.img} />;
+    <main className="">
+      <div className="flex flex-col gap-[100px] justify-center items-center pr-[350px] pl-[350px]">
+        <Navbar />
+        <div className="relative flex flex-col justify-center">
+          {MainBigData.map((element) => {
+            return <MainBigPic img={element.img} />;
           })}
-        </div>
-      </div>
-      <div className="flex justify-center items-center">
-        <div className="flex flex-col justify-center gap-[30px]">
-          <h1 className="text-[24px] font-bold">All Blog Post</h1>
-          <div className="flex gap-[30px]">
-            <div className="flex gap-[20px] ">
-              <button>All</button>
-              <button>Design</button>
-              <button>Travel</button>
-              <button>Fashion</button>
-              <button>Technology</button>
-              <button>Branding</button>
-            </div>
-            <div className="w-[826px] flex justify-end">
-              <button>View All</button>
+          <div className="absolute flex flex-col w-[598px] h-[252px] p-[40px] gap-[24px] rounded-xl border border-solid bg-white right-[607px] left-[11px] top-[335px] bottom-[64px]   ">
+            <div className="flex flex-col gap-[16px]">
+              <div className="flex w-[97px] py-[4px] px-[10px] justify-center items-center gap-[4px] rounded bg-[#4B6BFB] ">
+                <h3 className="text-[14x] font-medium text-white">
+                  Technology
+                </h3>
+              </div>
+              <h1 className="text-[36px] font-bold leading-10">
+                Grid system for better Design User Interface
+              </h1>
+              <h5>August 20,2022</h5>
             </div>
           </div>
+          <div className="flex ">
+            <button>
+              <ArrowLeft />
+            </button>
+            <button>
+              <ArrowRight />
+            </button>
+          </div>
+        </div>
 
-          <PicBox />
+        <div className="flex flex-col gap-[30px] ">
+          <h1 className="text-[24px] font-bold">Trending</h1>
+          <div className="flex justify-center gap-[20px]">
+            {TrendingData.map((element) => {
+              return <TrendingPic img={element.img} />;
+            })}
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-[1216px]">
+          <div className="flex flex-col justify-between gap-[30px]">
+            <h1 className="text-[24px] font-bold">All Blog Post</h1>
+            <div className="flex gap-[30px] justify-between">
+              <div className="flex gap-[20px]">
+                <button>All</button>
+                <button>Design</button>
+                <button>Travel</button>
+                <button>Fashion</button>
+                <button>Technology</button>
+                <button>Branding</button>
+              </div>
+              <div className="flex justify-end">
+                <button>View All</button>
+              </div>
+            </div>
+
+            <PicBox />
+          </div>
         </div>
       </div>
-      <div></div>
+
+      <div className=" bg-[#F6F6F7] items-center flex flex-col gap-[25px] pr-[352px] pl-[352px] pt-16">
+        <div className="flex flex-col gap-[15px]">
+          <div className="flex gap-5 w-[1215px]">
+            <div className="flex flex-col items-start gap-6 ">
+              <div className="flex flex-col gap-3 items-start">
+                <div className="text-[18px] font-bold">About</div>
+                <p className="w-[280px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam
+                </p>
+              </div>
+              <div>
+                <div>Email : info@jstemplate.net</div>
+                <div>Phone : 880 123 456 789</div>
+              </div>
+            </div>
+            <div className="w-[521px] flex items-start justify-center gap-20">
+              <div className="flex items-start gap-2 flex-col">
+                <p>Home</p>
+                <p>Blog</p>
+                <p>Contact</p>
+              </div>
+            </div>
+            <div className="flex gap-5">
+              <Facebook />
+              <Twitter />
+              <Instagram />
+              <Linkedin />
+            </div>
+          </div>
+        </div>
+        <div className="flex w-[1216px] justify-between gap-16 py-8 border-t">
+          <div className="flex gap-[10px] items-center">
+            <Blogo />
+            <div className="flex flex-col">
+              <div className="flex">
+                <p className="text-[20px]">Meta</p>
+                <p className="text-[20px] font-extrabold">Blog</p>
+              </div>
+              <p className="text-[16px]">© All Rights Reserved.</p>
+            </div>
+          </div>
+          <div className="flex gap-4 justify-end items-center">
+            <button>Terms of Use</button>
+            <button>Privacy Policy</button>
+            <button>Cookie Policy</button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
