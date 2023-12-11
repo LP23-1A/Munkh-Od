@@ -33,7 +33,7 @@ const TrendingData = [
 export default function Home() {
   return (
     <main className="">
-      <div className="flex flex-col gap-[100px] justify-center items-center pr-[350px] pl-[350px]">
+      <div className="flex flex-col gap-[100px] justify-between items-center pr-[350px] pl-[350px]">
         <Navbar />
         <div className="relative flex flex-col justify-center">
           {MainBigData.map((element) => {
@@ -52,13 +52,15 @@ export default function Home() {
               <h5>August 20,2022</h5>
             </div>
           </div>
-          <div className="flex ">
-            <button>
-              <ArrowLeft />
-            </button>
-            <button>
-              <ArrowRight />
-            </button>
+          <div>
+            <div className="flex gap-[9px] justify-end pt-[11px]">
+              <button className="w-[40px] h-[40px] ">
+                <ArrowLeft />
+              </button>
+              <button className="w-[40px] h-[40px] ">
+                <ArrowRight />
+              </button>
+            </div>
           </div>
         </div>
 
