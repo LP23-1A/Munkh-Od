@@ -5,7 +5,7 @@ const port = 8000;
 
 app.use(bp.json());
 
-const users = [
+let users = [
   {
     id: 1,
     name: "orgil",
@@ -23,8 +23,14 @@ const users = [
 app.get("/", (req, res) => {
   res.send({ success: true, users: users }).end;
 });
-
+app.get("/:id", (request, response) => {
+  const id = request.params.id;
+  const filteredData = users.filter((user) => user.id === parseInt(id));
+  response.send({ success: true, users: filteredData }).end();
+});
 app.post("/", (req, res) => {
+  const data = request.body;
+  users.push(data);
   res.send({ success: true, users: users }).end();
 });
 
@@ -44,7 +50,9 @@ app.put("/:id", (req, res) => {
 app.delete("/:id", (req, res) => {
   const id = req.params.id;
   const deletedUserId = users.findIndex((user) => user.id === parseInt(id));
-  users = users.slice(o, deletedUserId);
+  if (deletedUserId !== -1) {
+    users.splice(deletedUserId, 1);
+  }
   res.send({ success: true, users: users }).end;
 });
 
