@@ -1,12 +1,14 @@
 import express from "express";
 import { connectDatabase } from "./utils/database";
 import { auth } from "./router/User";
+import cors from "cors";
 
 const PORT = 8000;
 
 const start = () => {
   const app = express();
   app.use(express.json());
+  app.use(cors());
 
   connectDatabase();
 
