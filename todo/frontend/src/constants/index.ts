@@ -5,6 +5,6 @@ export const menus = [
   },
   {
     link: "signup",
-    title: "Sign up",
+    title: "Sign Up",
   },
 ];

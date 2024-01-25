@@ -35,7 +35,13 @@ const SignUpPage = () => {
 
       router.push("/login");
     } catch (error: any) {
-      setError(error.response.data.msg);
+      if (error.response && error.response.status === 400) {
+        setError(
+          "Username already in use. Please choose a different username."
+        );
+      } else {
+        setError("An error occurred during signup. Please try again.");
+      }
     }
   };
 
