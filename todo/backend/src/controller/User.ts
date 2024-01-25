@@ -9,9 +9,10 @@ type SignUpType = {
 };
 
 type UserType = {
+  _id: string;
   username: string;
   password: string;
-  avatarImage: string;
+  __v: number;
 };
 
 export const signUp = async (req: Request, res: Response) => {
@@ -28,6 +29,7 @@ export const signUp = async (req: Request, res: Response) => {
         throw new Error(JSON.stringify(error));
       }
     });
+
     return res.status(201).send({ success: true });
   } catch (error: any) {
     if (error.code === 11000) {
@@ -57,12 +59,12 @@ export const login = async (req: Request, res: Response) => {
 
     bcrypt.compare(password, user.password, async function (err, result) {
       if (!result) {
-        return res.send({
+        return res.status(400).send({
           success: false,
           msg: "Username or password incorrect",
         });
       } else {
-        return res.send({ success: true });
+        return res.send({ success: true, user });
       }
     });
   } catch (error) {

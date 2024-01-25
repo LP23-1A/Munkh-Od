@@ -7,6 +7,7 @@ const PORT = 8000;
 
 const start = () => {
   const app = express();
+
   app.use(express.json());
   app.use(cors());
 
