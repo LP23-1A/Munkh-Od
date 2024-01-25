@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import { UserModel } from "../model/User";
 
 type SignUpType = {
@@ -25,23 +26,13 @@ export const signUp = async (req: Request, res: Response) => {
       try {
         const result = await UserModel.create({ username, password: hash });
         console.log(result);
+        // console.log(result, "result");
+        return res.status(201).send({ success: true });
       } catch (error) {
-        throw new Error(JSON.stringify(error));
+        return res.send({ error });
       }
     });
-
-    return res.status(201).send({ success: true });
   } catch (error: any) {
-    if (error.code === 11000) {
-      console.log("a");
-      return res.status(400).send({
-        success: false,
-        error: {
-          msg: "Already existing username",
-          code: error.code,
-        },
-      });
-    }
     return res.status(400).send({ success: false, error: "Invalid request" });
   }
 };
@@ -64,10 +55,13 @@ export const login = async (req: Request, res: Response) => {
           msg: "Username or password incorrect",
         });
       } else {
-        return res.send({ success: true, user });
+        const SECRET_KEY = "test";
+        const token = jwt.sign({ ...user }, SECRET_KEY);
+
+        return res.send({ success: true, token });
       }
     });
   } catch (error) {
-    console.log(error);
+    return res.status(400).send({ success: false, error });
   }
 };
